@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import {Route, Switch} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Home from "./home";
 import Trending from "./trending";
@@ -12,11 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Nav />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/tending" component={Trending} />
+          <Route path="/trending" component={Trending} />
           <Route path="/image/:imageId" component={Image} />
-        </Switch>        
+        </Switch>
       </div>
     );
   }
