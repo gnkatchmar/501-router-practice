@@ -18,6 +18,7 @@ class TrendingContainer extends Component {
   render() {
     return (
       <div>
+        <br />
         Trending Gifs:
         <br />
         {this.handleTrending()}

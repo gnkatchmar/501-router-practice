@@ -12,3 +12,9 @@ export const trending = () => {
     `${URL}/trending?api_key=${API_KEY}`,
   ).then(res => res.json());
 };
+
+export const random = () => {
+  return fetch(
+    `${URL}/random?api_key=${API_KEY}`,
+  ).then(res => res.json());
+};

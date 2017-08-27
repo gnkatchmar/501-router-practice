@@ -7,7 +7,7 @@ class NavBar extends Component {
       <div className = "Nav">
         <Link to="/"> Home </Link>
         <Link to="/trending"> Trending </Link>
-        <button> Random </button>
+        <Link to="/random"> Random </Link>
       </div>
     );
   }
