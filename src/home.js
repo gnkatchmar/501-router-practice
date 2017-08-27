@@ -7,6 +7,7 @@ class HomeContainer extends Component {
     value: "",
     gifs: [],
   };
+
   handleSearch = e => {
     if (!e.key === "Enter") return;
     search(this.state.value).then(gifs => {
@@ -15,9 +16,11 @@ class HomeContainer extends Component {
       });
     });
   };
+  
   render() {
     return (
       <div>
+        Type search word here:&nbsp;
         <input
           value={this.state.value}
           onChange={e => this.setState({ value: e.target.value })}
@@ -25,7 +28,7 @@ class HomeContainer extends Component {
         />
         <div>
           {this.state.gifs.map(gif => {
-            const imgSrc = gif.images.downsized_medium;
+            const imgSrc = gif.images.fixed_width;
             return <img key={gif.id} src={imgSrc.url} />;
           })}
         </div>
