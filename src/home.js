@@ -16,10 +16,11 @@ class HomeContainer extends Component {
       });
     });
   };
-  
+
   render() {
     return (
       <div>
+        <br />
         Type search word here:&nbsp;
         <input
           value={this.state.value}
