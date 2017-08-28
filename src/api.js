@@ -11,4 +11,4 @@ export const trending = () => {
   return fetch(
     `${URL}/trending?api_key=${API_KEY}`,
   ).then(res => res.json());
-}
+};

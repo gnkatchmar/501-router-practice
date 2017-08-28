@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { search } from "./api";
 
 class HomeContainer extends Component {
