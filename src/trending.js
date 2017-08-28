@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import "./trending.css";
 import { trending } from "./api";
 
 class TrendingContainer extends Component {

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { search } from "./api";
+import Details from "./details";
+import "./home.css";
 
 class HomeContainer extends Component {
   state = {
     value: "",
     gifs: [],
+    selectedId: null,
   };
 
   handleSearch = e => {
@@ -15,6 +18,12 @@ class HomeContainer extends Component {
       });
     });
   };
+
+  clear = () => {
+    this.setState({
+      selectedId: null,
+    })
+  }
 
   render() {
     return (
@@ -27,11 +36,15 @@ class HomeContainer extends Component {
           onKeyUp={this.handleSearch}
         />
         <div>
-          {this.state.gifs.map(gif => {
+          <br />
+          {!this.state.selectedId && this.state.gifs.map(gif => {
             const imgSrc = gif.images.fixed_width;
-            return <img key={gif.id} src={imgSrc.url} />;
+            return <img key={gif.id} src={imgSrc.url} onClick={() => this.setState({selectedId: gif.id})} />;
           })}
         </div>
+        {
+          this.state.selectedId && <Details id={this.state.selectedId} onClear={this.clear} />
+        }
       </div>
     );
   }

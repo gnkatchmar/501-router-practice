@@ -7,6 +7,7 @@ import Home from "./home";
 import Trending from "./trending";
 import Image from "./image";
 import Nav from "./nav";
+import Details from "./details";
 
 class App extends Component {
   render() {
@@ -16,7 +17,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/trending" component={Trending} />
-          <Route path="/image/:imageId" component={Image} />
+          <Route path="/image/:imageId" component={Details} />
         </Switch>
       </div>
     );
