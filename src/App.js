@@ -5,7 +5,6 @@ import { Route, Switch } from "react-router-dom";
 
 import Home from "./home";
 import Trending from "./trending";
-import Random from "./random";
 import Image from "./image";
 import Nav from "./nav";
 
@@ -17,7 +16,6 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/trending" component={Trending} />
-          <Route path="/random" component={Random} />
           <Route path="/image/:imageId" component={Image} />
         </Switch>
       </div>
