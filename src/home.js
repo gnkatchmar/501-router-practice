@@ -43,7 +43,7 @@ class HomeContainer extends Component {
           })}
         </div>
         {
-          this.state.selectedId && <Details id={this.state.selectedId} onClear={this.clear} />
+          this.state.selectedId && <Details id={this.state.selectedId} onClear={this.clear} />         
         }
       </div>
     );
