@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import {withRouter} from "react-router-dom";
 
 const API_KEY = "d2da05e5823d4073aa18f6715ca015f8";
 const URL = "https://api.giphy.com/v1/gifs";
@@ -26,8 +27,8 @@ class PictureDetails extends Component {
       selectedId: null,
     });
 
-    // history.push(`/${this.props.id}`)
-
+    // this.props.history.push(`/${this.props.id}`);
+   
      fetch(`${URL}/${this.props.id}?api_key=${API_KEY}`).then(checkStatus).then(res => res.json()).then(
       picture => {
         this.setState({
